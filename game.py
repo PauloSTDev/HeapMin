@@ -14,7 +14,7 @@ while True:
 
     opcao = input("Escolha uma opção (1-6): ")
     if not controller.fila_prioridade:
-        controller.fila_prioridade = [(1, 1, 'Ana'), (22, 2,'Maria'), (33, 3,'Pedro'), (1, 4, 'Ana'), (5, 5, 'Lucas'), (6, 6, 'Clara'), (1, 2, 'Ana', (1, 5, 'Ana'))]
+        controller.generatePatients()
         controller.heapify(controller.fila_prioridade)
 
     if opcao == '1':
