@@ -18,6 +18,7 @@ while True:
         controller.heapify(controller.fila_prioridade)
 
     if opcao == '1':
+        # Caso for Windows alterar para cls no lugar do clear
         os.system('clear')
         controller.pop()
 
