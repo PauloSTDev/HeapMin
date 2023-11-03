@@ -15,5 +15,5 @@ def _genRandomName():
 def genPatient():
     nome = _genRandomName()
     idade = random.randint(0, 90)
-    prioridade = random.randint(1, 20)
+    prioridade = random.randint(1, 10)
     return PatientGen(nome, idade, prioridade)

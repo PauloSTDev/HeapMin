@@ -7,6 +7,7 @@ class HeapMin:
 
     def heapify(self, fila):
         heapq.heapify(fila)
+        # fila.sort()
     
     def generatePatients(self):
         self.fila_prioridade = [(patient.genPatient().prioridade, patient.genPatient().idade, patient.genPatient().nome) for _ in range(5)]
@@ -29,6 +30,10 @@ class HeapMin:
             print(f"Prioridade {paciente[0]} (Idade: {paciente[1]}, Paciente: {paciente[2]})")
     
     def printServed(self, showJustFive = True):
+        if self.fila_atendidos == []:
+            print('Não há nenhum paciente atendido ainda')
+            return None
+        
         self.heapify(self.fila_atendidos)
         for paciente in self.fila_atendidos:
             print(f"Prioridade {paciente[0]} (Idade: {paciente[1]}, Paciente: {paciente[2]})")
