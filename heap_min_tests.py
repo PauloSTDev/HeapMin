@@ -24,11 +24,9 @@ class HeapLibTests(unittest.TestCase):
         self.heap = HeapMin(self.fila_prioridade, self.fila_atendidos)
 
     def test_heapify(self):
-        
         self.heap.fila_prioridade = [(6, 6, 'Clara'), (2, 2, 'Maria'), (1, 1, 'Ana'), (3, 10, 'Pedro'), (1, 4, 'Ana'), (5, 5, 'Lucas')]
         self.heap.heapify(self.heap.fila_prioridade)
         self.assertEqual(len(self.heap.fila_prioridade), 6)
-        # self.assertEqual(self.heap.fila_prioridade, [(1, 1, 'Ana'), (1, 4, 'Ana'), (2, 2, 'Maria'), (3, 10, 'Pedro'), (5, 5, 'Lucas'), (6, 6, 'Clara')])
 
     def test_generatePatients(self):
         self.heap.generatePatients()
@@ -38,6 +36,7 @@ class HeapLibTests(unittest.TestCase):
         self.heap.heappush((3, 5, 'Paulo tester'))
         self.heap.heappush((5, 5, 'Guilherme tester'))
         self.assertEqual(self.heap.fila_atendidos, [(3, 5, 'Paulo tester'), (5, 5, 'Guilherme tester')])
+        self.assertEqual(len(self.heap.fila_atendidos), 2)
 
     def test_pop(self):
         self.heap.fila_prioridade = [(1, 1, 'Ana'), (1, 4, 'Ana'), (2, 2, 'Maria')]
