@@ -15,7 +15,7 @@ class PatientTests(unittest.TestCase):
         self.patient = patient.genPatient()
         self.assertEqual(len(self.patient.nome), 4)        
         self.assertIn(self.patient.prioridade, [1,2,3,4,5,6,7,8,9,10])        
-        self.assertIn(self.patient.idade, list(range(91)))     
+        self.assertIn(self.patient.idade, list(range(91)))
 
 class HeapLibTests(unittest.TestCase):
     def setUp(self):
@@ -64,7 +64,7 @@ class HeapLibTests(unittest.TestCase):
         self.assertEqual(len(self.heap.fila_prioridade), 0)
 
     def test_printServed(self):
-        # Deve retornar None call a fila_atendidos esteja vazia
+        # Deve retornar None caso a fila_atendidos esteja vazia
         self.assertIsNone(self.heap.printServed())
 
         self.heap.fila_atendidos = [(1, 4, 'Ana'), (2, 2, 'Maria')]

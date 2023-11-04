@@ -19,23 +19,28 @@ while True:
 
     if opcao == '1':
         # Caso for Windows alterar para cls no lugar do clear
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         controller.pop()
 
     elif opcao == '2':
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         controller.printPriority()
 
     elif opcao == '3':
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         controller.printNext()
 
     elif opcao == '4':
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         controller.printServed()
 
     elif opcao == '5':
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         controller.printServed(showJustFive = False)
 
     elif opcao == '6':
